@@ -1,0 +1,96 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: verdana;
+}
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: url(Videos/floor.jpg);
+background-attachment: fixed;
+background-size: cover;
+}
+.book
+{
+    position: relative;
+    top: 0;
+    width: 300px;
+    height: 450px;
+    background: #ffff;
+    transform: rotate(-37.5deg) skewX(10deg);
+    box-shadow: -35px 35px 50px rgb(68, 59, 59);
+}
+.book:hover
+{
+    transform: rotate(-37.5deg) skewX(10deg) translate(20px,-20px );
+    box-shadow: -50px 50px 100px rgb(68, 59, 59);
+}
+.book::before
+{
+    content:'';
+    width: 30px;
+    height: 100%;
+    background: url(Videos/housie.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg) translate(-30px, -15px);
+    box-shadow: inset -10px 0 20px rgba(0,0,0,0.2);
+}
+.book::after
+{
+    content: '';
+    width: 100%;
+    height: 30px;
+    background: #e5e4e2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg) translate(15px, 30px);
+}
+.book h2
+{
+    position:absolute;
+    bottom: 100px;
+    left: 5%;
+    font-size: 30px;
+    line-height: 1em;
+}
+.book h2 span
+{
+    background: url(Videos/housie.jpg);
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.book .writer
+{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #262626;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    padding-top: 5px;
+    font-weight: 500;
+    border-top-left-radius: 1px solid #262626;
+}
+.book .writer i
+{
+font-weight: 700;
+font-family:cursive;
+}
+.book .cover
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    background: url(Videos/housie.jpg);
+    background-size: cover;
+}
