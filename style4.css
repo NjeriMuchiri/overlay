@@ -1,0 +1,13 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background: #faf0e6 ;
+}
+.center
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
