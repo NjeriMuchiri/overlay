@@ -2,7 +2,7 @@ body
 {
     margin: 0;
     padding: 0;
-    background: #faf0e6 ;
+    background: #eed202;
 }
 .center
 {
@@ -10,4 +10,51 @@ body
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.box
+{
+    position: relative;
+    width:400px;
+    height: 200px;
+    transform: perspective(500px) rotate(-40deg) skew(25deg);
+    box-shadow: -90px 75px 20px rgba(0,0,0,0.3);
+    background: #fff url(Videos/iphone.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+    transition:0.5s;
+}
+.box:hover
+{
+    transform: perspective(500px) rotate(-40deg) skewY(25deg)
+    translate(50px, -50px);
+    box-shadow: -150px 115px 100px rgba(0,0,0,0.3);
+}
+.box::before
+{
+    content: '';
+    height:100%;
+    width:90px;
+    position:absolute;
+    top:0;
+    left:0;
+    transform: skewY(-40deg) translate(-90px, -38px);
+    background: #e0dee7 url(Videos/apple.jpg);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position:50% 50%;
+}
+.box::after
+{
+    content: '';
+    height:77px;
+    width:100%;
+    position:absolute;
+    bottom:0;
+    left:0;
+    transform: skewX(-50deg) translate(45px, 76px);
+    background: #cbcbd4 url(Videos/logo.jpg);
+    background-size: 90px;
+    background-repeat: no-repeat;
+    background-position:50% 50%;
 }
